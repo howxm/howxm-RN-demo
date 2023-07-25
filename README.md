@@ -2,7 +2,7 @@
 
 > ReactNative中使用浩客SDK代码示例（目前仅支持 iOS）
 
-## 1.安装sdk，建议使用pod安装, 详情参考参考：https://howxm.com/help/articles/ios-x-sdk
+## 1.安装sdk，建议使用pod安装, 详情参考：https://howxm.com/help/articles/ios-x-sdk
 > pod 'Howxm', '版本号'
 
 ## 2.实现 RCTBridgeModule 协议
@@ -30,5 +30,5 @@ Howxm.initializeSDK("your appid", () => {
 });
 ```
 
-## 弹框效果
+## 弹出效果（系统启动后会自动弹出）
 ![img.png](img.png)

@@ -14,9 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-reactNativeDemo-reactNativeDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-reactNativeDemo-reactNativeDemoTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B21FC2C42A6FC5A4009B942F /* Howxm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D385182A66401C00E66147 /* Howxm.xcframework */; };
+		B21FC2C52A6FC5A4009B942F /* Howxm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2D385182A66401C00E66147 /* Howxm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2D385712A67E13A00E66147 /* HowxmRN.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D385702A67E13A00E66147 /* HowxmRN.m */; };
-		B2F5E5CE2A6A716400C89D71 /* Howxm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D385182A66401C00E66147 /* Howxm.xcframework */; };
-		B2F5E5CF2A6A716400C89D71 /* Howxm.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2D385182A66401C00E66147 /* Howxm.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B2F5E5D02A6A716400C89D71 /* Embed Frameworks */ = {
+		B21FC2C62A6FC5A4009B942F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B2F5E5CF2A6A716400C89D71 /* Howxm.xcframework in Embed Frameworks */,
+				B21FC2C52A6FC5A4009B942F /* Howxm.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,7 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-reactNativeDemo.a in Frameworks */,
-				B2F5E5CE2A6A716400C89D71 /* Howxm.xcframework in Frameworks */,
+				B21FC2C42A6FC5A4009B942F /* Howxm.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +210,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
-				B2F5E5D02A6A716400C89D71 /* Embed Frameworks */,
+				B21FC2C62A6FC5A4009B942F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -477,7 +477,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.howxm.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactNativeDemo.app/reactNativeDemo";
 			};
@@ -501,7 +501,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.howxm.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reactNativeDemo.app/reactNativeDemo";
 			};
@@ -527,7 +527,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.howxm.demo;
 				PRODUCT_NAME = reactNativeDemo;
 				SWIFT_OBJC_BRIDGING_HEADER = "reactNativeDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -555,7 +555,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.howxm.demo;
 				PRODUCT_NAME = reactNativeDemo;
 				SWIFT_OBJC_BRIDGING_HEADER = "reactNativeDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

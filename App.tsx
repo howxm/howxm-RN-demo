@@ -60,12 +60,14 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const Howxm = NativeModules.HowxmRN;
-  Howxm.checkInitialized((initialized: any) => {
-    console.log('Initialized:', initialized);
-  });
 
-  Howxm.initializeSDK('bb1ec520-e7bb-41f0-9f0b-ba8d310d8872', () => {
+  Howxm.initializeSDK('5ed93d69-7f44-44a7-8769-f8ad131a2010', () => {
     console.log('initializeSDK completion');
+
+    Howxm.checkInitialized((initialized: any) => {
+      console.log('Initialized:', initialized);
+    });
+
     Howxm.onBeforeOpen(
       (campaignId: string, uid: string, extraAttributes: any) => {
         console.log('onBeforeOpen:', campaignId, uid, extraAttributes);
@@ -79,7 +81,7 @@ function App(): JSX.Element {
     );
 
     Howxm.checkOpen(
-      'bf96004512cb483c2f74f4cecd6d7fc7',
+      '6329d0091a5c789fb97eab345585fded',
       null,
       () => {
         console.log('checkOpen success');
@@ -99,21 +101,21 @@ function App(): JSX.Element {
       },
     );
 
-    Howxm.open(
-      'bf96004512cb483c2f74f4cecd6d7fc7',
-      {uid: 'u001', name: 'zuos', extraAttributes: {age: 18}},
-      {},
-    );
-    // Howxm.event(
-    //   'test',
-    //   {a: 1},
-    //   () => {
-    //     console.info('event success');
-    //   },
-    //   (error: any) => {
-    //     console.error(error);
-    //   },
+    // Howxm.open(
+    //   '6329d0091a5c789fb97eab345585fded',
+    //   {uid: 'u001', name: 'zuos', extraAttributes: {age: 18}},
+    //   {},
     // );
+    Howxm.event(
+      'payment_click',
+      {price: 100},
+      () => {
+        console.info('event success');
+      },
+      (error: any) => {
+        console.error(error);
+      },
+    );
   });
 
   const backgroundStyle = {
@@ -134,7 +136,7 @@ function App(): JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title='ad'>
+          <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -144,7 +146,7 @@ function App(): JSX.Element {
           <Section title="Debug">
             <DebugInstructions />
           </Section>
-          <Section title="asd">
+          <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
           <LearnMoreLinks />
