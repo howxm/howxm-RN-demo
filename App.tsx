@@ -82,7 +82,7 @@ function App(): JSX.Element {
 
     Howxm.checkOpen(
       '6329d0091a5c789fb97eab345585fded',
-      null,
+      'uid_001',
       () => {
         console.log('checkOpen success');
       },
@@ -92,7 +92,13 @@ function App(): JSX.Element {
     );
 
     Howxm.identify(
-      {uid: 'u001', name: 'zuos', extraAttributes: {age: 18}},
+      {
+        uid: 'uid_001',
+        name: 'zhangsan',
+        email: 'zhangsan@howxm.com',
+        mobile: '13000000000',
+        extraAttributes: {age: 18},
+      },
       () => {
         console.log('identify success');
       },
@@ -103,12 +109,12 @@ function App(): JSX.Element {
 
     // Howxm.open(
     //   '6329d0091a5c789fb97eab345585fded',
-    //   {uid: 'u001', name: 'zuos', extraAttributes: {age: 18}},
+    //   {uid: 'uid_001', name: 'zhangsan', extraAttributes: {age: 18}},
     //   {},
     // );
     Howxm.event(
       'payment_click',
-      {price: 100},
+      {price: 100, channel: 'React Native'},
       () => {
         console.info('event success');
       },
